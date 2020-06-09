@@ -3,9 +3,9 @@
 :local {
   .sideBar {
     background-color: $sidebarBg;
-    width: 70px;
+    width: 100px;
     padding: 8px;
-    margin-right: 8px;
     box-shadow: 0 0 5px rgba(black, 0.5);
+    border-right: 1px solid $borderColor;
   }
 }

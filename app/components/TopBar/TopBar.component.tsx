@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import styles from "./style.scss";
-import Logo from "../../UiKit/Logo";
 
-class LeftSideBar extends Component {
+class TopBar extends Component {
   public render() {
     return (
       <aside className={styles.sideBar}>
-        <Logo />
+        Top sideBar
       </aside>
     );
   }
 }
 
-export default LeftSideBar;
+export default TopBar;

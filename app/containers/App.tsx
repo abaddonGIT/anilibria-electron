@@ -1,5 +1,6 @@
 import React, { Component, ReactNode } from 'react';
 import LeftSideBar from "../components/LeftSideBar";
+import TopBar from "../components/TopBar";
 
 type Props = {
   children: ReactNode;
@@ -12,7 +13,8 @@ class App extends Component<Props> {
       <>
         <LeftSideBar />
         <main>
-        {children}
+          <TopBar />
+          {children}
         </main>
       </>
     );
