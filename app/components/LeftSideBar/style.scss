@@ -1,0 +1,11 @@
+@import "../../style.variables";
+
+:local {
+  .sideBar {
+    background-color: $sidebarBg;
+    width: 70px;
+    padding: 8px;
+    margin-right: 8px;
+    box-shadow: 0 0 5px rgba(black, 0.5);
+  }
+}

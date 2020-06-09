@@ -1,23 +1,17 @@
 import React from 'react';
 import { Provider } from 'mobx-react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { hot } from 'react-hot-loader/root';
-import { History } from 'history';
 import Routes from '../Routes';
 import initMobxStore from "../stores";
 
-const stores = initMobxStore(null);
+const stores = initMobxStore();
 
-type Props = {
-  history: History;
-};
-
-const Root = ({ history }: Props) => (
+const Root = () => (
   <Provider {...stores}>
-    <Router history={history}>
+    <Router>
       <Routes />
     </Router>
   </Provider>
 );
 
-export default hot(Root);
+export default Root;

@@ -1,12 +1,20 @@
 import UserStore from "./User.store";
+import { action, observable } from "mobx";
 
-interface IInitialState {}
+// interface IInitialState {}
 
 class RootStore {
   public uStore: UserStore;
+  @observable
+  public isDarkMode: boolean = false;
 
-  constructor(initialState) {
+  constructor() {
     this.uStore = new UserStore();
+  }
+
+  @action
+  public toggleDarkMode = (isActive: boolean): void => {
+    this.isDarkMode = isActive;
   }
 }
 

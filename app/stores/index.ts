@@ -1,7 +1,7 @@
 import RootStore from "./Root.store";
 
-export default (initialState) => {
-  const rStore = new RootStore(initialState);
+export default () => {
+  const rStore = new RootStore();
   return {
     rootStore: rStore,
     userStore: rStore.uStore,
