@@ -3,6 +3,7 @@ import HomePage from "../containers/HomePage";
 import { inject, observer } from "mobx-react";
 import RootStore from "../stores/Root.store";
 import UserStore from "../stores/User.store";
+import {httpRequest} from "../services/httpService";
 
 interface IProps {
   rootStore: RootStore;
@@ -13,7 +14,8 @@ interface IProps {
 @observer
 class HomeScreen extends Component<IProps> {
   public componentDidMount(): void {
-    console.log(this.props.rootStore);
+    const result = httpRequest({}).post("");
+    console.log(result);
   }
 
   public render() {
