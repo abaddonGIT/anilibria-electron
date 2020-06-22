@@ -34,6 +34,7 @@ export const httpRequest = (
     Origin,
   }: IClientHttpRequest): AxiosInstance => {
   const headers: any = {};
+  headers["Content-Type"] = "multipart/form-data";
   if (Cookies.get("csrftoken")) {
     headers["X-CSRFToken"] = Cookies.get("csrftoken");
   }

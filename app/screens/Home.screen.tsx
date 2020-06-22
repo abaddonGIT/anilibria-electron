@@ -14,7 +14,12 @@ interface IProps {
 @observer
 class HomeScreen extends Component<IProps> {
   public componentDidMount(): void {
-    const result = httpRequest({}).post("");
+    const data = new FormData();
+    data.append("query", "catalog");
+    data.append("filter", "id,code,poster,names,last,series,description");
+    data.append("xpage", "catalog");
+    data.append("perPage", "25");
+    const result = httpRequest({}).post("", data);
     console.log(result);
   }
 

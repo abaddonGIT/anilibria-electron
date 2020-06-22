@@ -1,1 +1,1 @@
-export const API_HOST = "https://www.anilibria.tv/public/api/index.php";
+export const API_HOST = "https://wwnd.space/public/api/index.php";
